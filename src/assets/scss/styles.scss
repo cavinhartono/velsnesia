@@ -6,3 +6,85 @@
   box-sizing: border-box;
   font-family: $default_fonts;
 }
+
+body {
+  color: $black-primary;
+}
+
+.icon {
+  width: $md;
+  height: $md;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  color: $white-primary;
+}
+
+.header .logo .icon {
+  position: absolute;
+  color: $primary-color;
+  transform: translate(4px, -8px) rotate(-120deg);
+}
+
+.header .logo .subtitle {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav {
+  color: $white-secondary;
+}
+
+.nav :not(.list:last-child .link) {
+  color: inherit;
+}
+
+.nav .list.active .link {
+  color: $white-primary;
+}
+
+.homepage {
+  height: 100vh;
+}
+
+.homepage .content {
+  color: $white-primary;
+}
+
+.homepage .content .title {
+  color: inherit !important;
+}
+
+.homepage_img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.homepage_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.homepage_img .photo {
+  width: 100%;
+  object-fit: cover;
+}

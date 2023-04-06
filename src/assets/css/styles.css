@@ -28,13 +28,39 @@
   src: url(../fonts/helvetica-neue/HeavyBold.ttf);
   font-weight: 800;
 }
+img {
+  width: initial;
+  height: inherit;
+}
+
+svg {
+  width: inherit;
+  height: inherit;
+  color: inherit;
+}
+
+.title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.gap {
+  gap: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .primary {
   border: none;
   outline: none;
   position: relative;
-  padding: 1.5rem 2rem;
+  padding: 12px 2rem;
   background: inherit;
-  border-radius: 8px;
+  border-radius: 4px;
   color: inherit;
   cursor: pointer;
 }
@@ -44,9 +70,17 @@
   color: hsl(0deg, 0%, 100%);
 }
 
+.full-content {
+  width: 100%;
+}
+
 .field {
   position: relative;
   width: 100%;
+}
+
+.list {
+  list-style-type: none;
 }
 
 .form-input {
@@ -71,6 +105,88 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+}
+
+body {
+  color: hsl(0deg, 0%, 13%);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.header .logo .icon {
+  position: absolute;
+  color: hsl(355deg, 78%, 43%);
+  transform: translate(4px, -8px) rotate(-120deg);
+}
+
+.header .logo .subtitle {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav {
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.nav :not(.list:last-child .link) {
+  color: inherit;
+}
+
+.nav .list.active .link {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.homepage {
+  height: 100vh;
+}
+
+.homepage .content {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.homepage .content .title {
+  color: inherit !important;
+}
+
+.homepage_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.homepage_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.homepage_img .photo {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

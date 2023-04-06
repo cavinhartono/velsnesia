@@ -5,6 +5,7 @@ $head_fonts: 'Helvetica Neue', sans-serif;
 $primary-color: hsl(355, 78%, 43%);
 $secondary-color: hsl(48, 100%, 38%);
 $white-primary: hsl(0, 0%, 100%);
+$white-secondary: hsla(0, 0%, 100%, 0.75);
 $black-primary: hsl(0, 0%, 13%);
 $black-secondary: hsla(0, 0%, 13%, 0.75);
 $shadow-primary: 0px 8px 45px hsla(0, 0%, 13%, 0.1);
@@ -15,13 +16,39 @@ $md: 2rem;
 $lg: 2.5rem;
 $xl: 3rem;
 
+img {
+  width: initial;
+  height: inherit;
+}
+
+svg {
+  width: inherit;
+  height: inherit;
+  color: inherit;
+}
+
+.title {
+  font-family: $head_fonts;
+  font-size: $md;
+  font-weight: 700;
+}
+
+.gap {
+  gap: $md;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 %btn {
   border: none;
   outline: none;
   position: relative;
-  padding: $sm $md;
+  padding: 12px $md;
   background: inherit;
-  border-radius: 8px;
+  border-radius: 4px;
   color: inherit;
   cursor: pointer;
 }
@@ -32,9 +59,17 @@ $xl: 3rem;
   color: $white-primary;
 }
 
+.full-content {
+  width: 100%;
+}
+
 .field {
   position: relative;
   width: 100%;
+}
+
+.list {
+  list-style-type: none;
 }
 
 .form-input {
