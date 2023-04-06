@@ -1,0 +1,55 @@
+@import 'fonts';
+
+$default_fonts: 'Public Sans', sans-serif;
+$head_fonts: 'Helvetica Neue', sans-serif;
+$primary-color: hsl(355, 78%, 43%);
+$secondary-color: hsl(48, 100%, 38%);
+$white-primary: hsl(0, 0%, 100%);
+$black-primary: hsl(0, 0%, 13%);
+$black-secondary: hsla(0, 0%, 13%, 0.75);
+$shadow-primary: 0px 8px 45px hsla(0, 0%, 13%, 0.1);
+$shadow-secondary: 8px 8px 45px hsla(0, 0%, 100%), 8px 8px 45px hsla(0, 0%, 13%, 0.1);
+$sm: 1.5rem;
+$rg: 1.75rem;
+$md: 2rem;
+$lg: 2.5rem;
+$xl: 3rem;
+
+%btn {
+  border: none;
+  outline: none;
+  position: relative;
+  padding: $sm $md;
+  background: inherit;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.primary {
+  @extend %btn;
+  background: $primary-color;
+  color: $white-primary;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}

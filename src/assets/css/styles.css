@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans/PublicSans-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans/PublicSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans/PublicSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans/PublicSans-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(../fonts/helvetica-neue/Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(../fonts/helvetica-neue/HeavyBold.ttf);
+  font-weight: 800;
+}
+.primary {
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 1.5rem 2rem;
+  background: inherit;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.primary {
+  background: hsl(355deg, 78%, 43%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */
