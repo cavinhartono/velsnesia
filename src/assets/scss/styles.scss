@@ -134,7 +134,8 @@ body {
   box-shadow: $shadow-primary;
   transform: translateY(100%);
   .content .title {
-    font-size: $rg !important;
+    font-size: 18px !important;
+    margin: $sm 0;
     font-weight: 700;
     color: $black-primary !important;
   }
@@ -145,8 +146,70 @@ body {
   }
 
   .content .text {
+    text-align: justify;
+    margin-top: $sm;
     font-size: 16px !important;
+    font-weight: 600;
     line-height: $md;
     color: $black-secondary !important;
+  }
+}
+
+.trending {
+  margin-top: 150px;
+  padding: 100px;
+  .cards {
+    margin: $md 0;
+  }
+  .cards,
+  .header {
+    padding: 0;
+    position: relative;
+    box-shadow: none;
+    background: none;
+    transform: none;
+  }
+  .list {
+    padding: $sm;
+    border-radius: 8px;
+    background: $white-primary;
+    box-shadow: $shadow-primary;
+  }
+  .img {
+    width: 320px;
+    height: 200px;
+  }
+  .title {
+    font-size: $md !important;
+  }
+  .title,
+  .text {
+    margin: 0 !important;
+  }
+
+  .subtitle {
+    font-size: 16px !important;
+    color: $black-secondary;
+  }
+  .review {
+    position: relative;
+  }
+  .review .icon {
+    color: gold;
+  }
+  .review .subtitle {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: $rg !important;
+    color: $black-secondary;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
