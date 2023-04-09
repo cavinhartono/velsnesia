@@ -1,5 +1,22 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import IconAirplane from '../icons/travels/IconAirplane.vue'
+
+var prevScroll = window.pageYOffset
+
+window.onscroll = () => {
+  var currentScroll = window.pageYOffset
+
+  if (prevScroll > currentScroll) {
+    document.querySelector('.header').style.top = '0'
+    document.querySelector('.header').classList.add('active')
+  } else {
+    document.querySelector('.header').style.top = '-100px'
+    document.querySelector('.header').classList.remove('active')
+  }
+
+  prevScroll = currentScroll
+}
 </script>
 
 <template>
@@ -9,10 +26,18 @@ import IconAirplane from '../icons/travels/IconAirplane.vue'
       <span class="icon"><IconAirplane /></span>
     </div>
     <ul class="nav gap flex">
-      <li class="list active"><a href="#home" class="link">Home</a></li>
-      <li class="list"><a href="#destinations" class="link">Destinations</a></li>
-      <li class="list"><a href="#about" class="link">How it works</a></li>
-      <li class="list"><a href="/login" class="link btn primary">Login</a></li>
+      <li class="list">
+        <RouterLink class="link" to="/">Home</RouterLink>
+      </li>
+      <li class="list">
+        <RouterLink class="link" to="/destinations">Destinations</RouterLink>
+      </li>
+      <li class="list">
+        <RouterLink class="link" to="/about">How it works</RouterLink>
+      </li>
+      <li class="list">
+        <RouterLink class="link btn primary" to="/login">Login</RouterLink>
+      </li>
     </ul>
   </header>
 </template>

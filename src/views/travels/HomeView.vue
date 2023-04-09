@@ -4,6 +4,7 @@ import Content from '@/components/travels/ContentHomepageView.vue'
 import Card from '@/components/travels/CardInformationView.vue'
 import List from '@/components/travels/ListInformationView.vue'
 import Trending from '@/components/travels/TrendingView.vue'
+import Footer from '@/components/travels/FooterView.vue'
 
 // Icons
 import IconSearch from '@/components/icons/travels/IconSearch.vue'
@@ -48,5 +49,6 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
       </Card>
     </div>
     <Trending />
+    <Footer />
   </section>
 </template>
