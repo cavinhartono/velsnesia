@@ -60,9 +60,6 @@ import Instagram from '../icons/travels/IconInstagram.vue'
 </template>
 
 <style>
-.container {
-}
-
 .icon {
   width: 24px;
   height: 24px;
