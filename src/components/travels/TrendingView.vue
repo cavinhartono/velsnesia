@@ -58,7 +58,7 @@ export default {
         {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'ac4c811968mshd0e5a875afda39ap1af96ejsn6f54c5343107',
+            'X-RapidAPI-Key': '',
             'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
           }
         }
