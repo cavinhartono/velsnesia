@@ -6,10 +6,13 @@ import ListWithImage from '@/components/travels/ImageListView.vue'
 <template>
   <div class="trending">
     <h2 class="title">Trending</h2>
-    <Card>
+    <Card v-for="travel in travels">
       <ListWithImage>
         <template #image>
-          <img src="@/components/images/pura-1.jpg" alt="Pura" />
+          <img
+            src="https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id={{ travel.essId.sourceId }}"
+            alt="Gambar"
+          />
         </template>
         <template #title>Gunung Agung</template>
         <template #desc>Bali, Indonesia</template>
@@ -40,3 +43,31 @@ import ListWithImage from '@/components/travels/ImageListView.vue'
     </Card>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      travels: []
+    }
+  },
+  methods: {
+    fetchData() {
+      fetch(
+        'https://hotels4.p.rapidapi.com/locations/v3/search?q=bali&locale=en_US&langid=1033&siteid=300000001',
+        {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': 'ac4c811968mshd0e5a875afda39ap1af96ejsn6f54c5343107',
+            'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+          }
+        }
+      )
+        .then((response) => {
+          response.json().then((data) => (this.travels = data))
+        })
+        .catch((err) => console.err(err))
+    }
+  }
+}
+</script>
