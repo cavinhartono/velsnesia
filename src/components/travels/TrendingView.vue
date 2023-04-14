@@ -6,13 +6,10 @@ import ListWithImage from '@/components/travels/ImageListView.vue'
 <template>
   <div class="trending">
     <h2 class="title">Trending</h2>
-    <Card v-for="travel in travels">
+    <Card>
       <ListWithImage>
         <template #image>
-          <img
-            src="https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id={{ travel.essId.sourceId }}"
-            alt="Gambar"
-          />
+          <img src="@/components/images/pura-1.jpg" alt="Gambar" />
         </template>
         <template #title>Gunung Agung</template>
         <template #desc>Bali, Indonesia</template>
