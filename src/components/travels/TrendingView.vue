@@ -1,15 +1,26 @@
-<script setup>
+<script>
 import Card from '@/components/travels/CardInformationView.vue'
 import ListWithImage from '@/components/travels/ImageListView.vue'
+import TrendingAPI from '../../API/Trending.json'
+
+export default {
+  name: 'TrendingView',
+  data() {
+    return {
+      travels: TrendingAPI
+    }
+  },
+  components: { Card, ListWithImage }
+}
 </script>
 
 <template>
   <div class="trending">
     <h2 class="title">Trending</h2>
-    <Card v-for="travel in travels" :key="travel.id">
-      <ListWithImage>
+    <Card>
+      <ListWithImage v-for="travel in travels" :key="travel.id">
         <template #image>
-          <img src="`${travel.img}" alt="Gambar" />
+          <img :src="travel.img" alt="Gambar" />
         </template>
         <template #title>{{ travel.name }}</template>
         <template #desc>{{ travel.from }}</template>
@@ -18,20 +29,3 @@ import ListWithImage from '@/components/travels/ImageListView.vue'
     </Card>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      travels: []
-    }
-  },
-  methods: {
-    getTrendingData() {
-      fetch('@/API/Trending.json')
-        .then((response) => response)
-        .then((data) => (this.travels = data))
-    }
-  }
-}
-</script>
