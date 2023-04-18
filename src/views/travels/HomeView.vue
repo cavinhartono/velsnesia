@@ -4,6 +4,7 @@ import Content from '@/components/travels/ContentHomepageView.vue'
 import Card from '@/components/travels/CardInformationView.vue'
 import List from '@/components/travels/ListInformationView.vue'
 import Trending from '@/components/travels/TrendingView.vue'
+import Destination from '@/views/travels/DestinationView.vue'
 import Footer from '@/components/travels/FooterView.vue'
 
 // Icons
@@ -30,7 +31,7 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
           </template>
         </List>
         <List>
-          <template #icon><IconTicket /></template>
+          <template #icon> <IconTicket /> </template>
           <template #title>Get Your Tickets</template>
           <template #desc>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio maxime ea culpa, quo
@@ -38,7 +39,7 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
           </template>
         </List>
         <List>
-          <template #icon><IconMap /></template>
+          <template #icon> <IconMap /> </template>
           <template #title>Travel Around the Country</template>
           <template #desc>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor velit, a similique
@@ -49,6 +50,7 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
       </Card>
     </div>
     <Trending />
+    <Destination />
     <Footer />
   </section>
 </template>

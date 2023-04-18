@@ -3,7 +3,7 @@ import IconArrowForward from '@/components/icons/travels/IconArrowForward.vue'
 </script>
 
 <template>
-  <div class="content">
+  <div class="content" style="position: relative">
     <h2 class="title" style="text-align: center">
       Explore the Beauty of Nature <br />
       Discover the New You

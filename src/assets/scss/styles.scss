@@ -54,6 +54,11 @@ body {
   color: $white-primary;
 }
 
+.trending,
+.destinations {
+  padding: 100px;
+}
+
 .homepage {
   height: 100vh;
 }
@@ -133,7 +138,7 @@ body {
   padding: $md;
   width: 900px !important;
   box-shadow: $shadow-primary;
-  transform: translateY(100%);
+  transform: translateY(125%);
   .content .title {
     font-size: 18px !important;
     margin: $sm 0;
@@ -144,6 +149,10 @@ body {
   .content .icon {
     width: 32px;
     height: 32px;
+  }
+
+  .list .icon {
+    color: #222;
   }
 
   .content .text {
@@ -157,8 +166,7 @@ body {
 }
 
 .trending {
-  margin-top: 150px;
-  padding: 100px;
+  margin-top: 16rem;
   .cards {
     margin: $md 0;
   }
@@ -179,6 +187,8 @@ body {
   .img {
     width: 320px;
     height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
   }
   .title {
     font-size: $md !important;
@@ -196,13 +206,14 @@ body {
     position: relative;
   }
   .review .icon {
-    color: gold;
+    color: #ffb700;
   }
   .review .subtitle {
     position: absolute;
     top: 6px;
-    left: 5px;
+    right: 5px;
     font-weight: 600;
+    color: $black-primary !important;
   }
   .text {
     font-size: $rg !important;
@@ -213,6 +224,10 @@ body {
     height: 100%;
     object-fit: cover;
   }
+}
+
+.destinations {
+  padding: 0 100px !important;
 }
 
 .nations {
@@ -229,7 +244,14 @@ body {
   }
 
   @for $i from 1 through 6 {
+    .list-#{$i}:hover {
+      .desc {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
     .list-#{$i} {
+      position: relative;
       border-radius: 8px;
       list-style-type: none;
       @supports (display: grid) {
@@ -237,6 +259,32 @@ body {
         grid-row: var(--row);
       }
       overflow: hidden;
+      .img {
+        z-index: 1;
+      }
+      .desc {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: $md;
+        color: $white-primary;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        .title {
+          font-size: var(--title) !important;
+          margin: 12px 0;
+        }
+        .text {
+          font-size: var(--text) !important;
+          line-height: $rg;
+          color: $white-secondary;
+          font-weight: 500;
+        }
+        transition: 0.5s;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 10;
+      }
     }
   }
 }

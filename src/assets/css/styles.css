@@ -145,6 +145,11 @@ body {
   color: hsl(0deg, 0%, 100%);
 }
 
+.trending,
+.destinations {
+  padding: 100px;
+}
+
 .homepage {
   height: 100vh;
 }
@@ -222,7 +227,7 @@ body {
   padding: 2rem;
   width: 900px !important;
   box-shadow: 0px 8px 45px hsla(0deg, 0%, 13%, 0.1);
-  transform: translateY(100%);
+  transform: translateY(125%);
 }
 .cards .content .title {
   font-size: 18px !important;
@@ -234,6 +239,9 @@ body {
   width: 32px;
   height: 32px;
 }
+.cards .list .icon {
+  color: #222;
+}
 .cards .content .text {
   text-align: justify;
   margin-top: 1.5rem;
@@ -244,8 +252,7 @@ body {
 }
 
 .trending {
-  margin-top: 150px;
-  padding: 100px;
+  margin-top: 16rem;
 }
 .trending .cards {
   margin: 2rem 0;
@@ -267,6 +274,8 @@ body {
 .trending .img {
   width: 320px;
   height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
 }
 .trending .title {
   font-size: 2rem !important;
@@ -283,13 +292,14 @@ body {
   position: relative;
 }
 .trending .review .icon {
-  color: gold;
+  color: #ffb700;
 }
 .trending .review .subtitle {
   position: absolute;
   top: 6px;
-  left: 5px;
+  right: 5px;
   font-weight: 600;
+  color: hsl(0deg, 0%, 13%) !important;
 }
 .trending .text {
   font-size: 1.75rem !important;
@@ -299,6 +309,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.destinations {
+  padding: 0 100px !important;
 }
 
 .nations {
@@ -315,7 +329,12 @@ body {
   width: 100%;
   height: 100%;
 }
+.nations .list-1:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-1 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -326,7 +345,38 @@ body {
     grid-row: var(--row);
   }
 }
+.nations .list-1 .img {
+  z-index: 1;
+}
+.nations .list-1 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-1 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-1 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+.nations .list-2:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-2 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -337,7 +387,38 @@ body {
     grid-row: var(--row);
   }
 }
+.nations .list-2 .img {
+  z-index: 1;
+}
+.nations .list-2 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-2 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-2 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+.nations .list-3:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-3 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -348,7 +429,38 @@ body {
     grid-row: var(--row);
   }
 }
+.nations .list-3 .img {
+  z-index: 1;
+}
+.nations .list-3 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-3 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-3 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+.nations .list-4:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-4 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -359,7 +471,38 @@ body {
     grid-row: var(--row);
   }
 }
+.nations .list-4 .img {
+  z-index: 1;
+}
+.nations .list-4 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-4 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-4 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+.nations .list-5:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-5 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -370,7 +513,38 @@ body {
     grid-row: var(--row);
   }
 }
+.nations .list-5 .img {
+  z-index: 1;
+}
+.nations .list-5 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-5 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-5 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+.nations .list-6:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
 .nations .list-6 {
+  position: relative;
   border-radius: 8px;
   list-style-type: none;
   overflow: hidden;
@@ -380,6 +554,32 @@ body {
     grid-column: var(--column);
     grid-row: var(--row);
   }
+}
+.nations .list-6 .img {
+  z-index: 1;
+}
+.nations .list-6 .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.nations .list-6 .desc .title {
+  font-size: var(--title) !important;
+  margin: 12px 0;
+}
+.nations .list-6 .desc .text {
+  font-size: var(--text) !important;
+  line-height: 1.75rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,34 +1,33 @@
+<script>
+import DestinationsAPI from '../../API/Destinations.json'
+
+export default {
+  name: 'DestinationView',
+  data() {
+    return {
+      destinations: DestinationsAPI
+    }
+  }
+}
+</script>
+
 <template>
   <div class="full-content">
     <ul class="nations flex gap">
-      <li class="list-1" style="--column: 1 / span 2; --row: 1 / span 2">
+      <li
+        :class="`list-${destination.id}`"
+        v-for="destination in destinations"
+        :key="destination.id"
+        :style="`--column: ${destination.style.column}; --row: ${destination.style.row}`"
+      >
         <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
-        </a>
-      </li>
-      <li class="list-2" style="--column: 3 / span 2; --row: 1 / span 2">
-        <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
-        </a>
-      </li>
-      <li class="list-3" style="--column: 5 / span 4; --row: 1 / span 5">
-        <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
-        </a>
-      </li>
-      <li class="list-4" style="--column: 1 / span 4; --row: 3 / span 3">
-        <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
-        </a>
-      </li>
-      <li class="list-5" style="--column: 1 / span 4; --row: 6 / span 3">
-        <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
-        </a>
-      </li>
-      <li class="list-6" style="--column: 5 / span 4; --row: 6 / span 3">
-        <a href="#" class="link">
-          <img src="@/components/images/pura-1.jpg" class="photo" />
+          <img :src="destination.img" class="photo" />
+          <div class="desc">
+            <h2 class="title" :style="`--title:${destination.style.title}`">
+              {{ destination.name }}
+            </h2>
+            <p class="text" :style="`--text: ${destination.style.text}`">{{ destination.desc }}</p>
+          </div>
         </a>
       </li>
     </ul>

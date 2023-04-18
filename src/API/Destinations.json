@@ -1,6 +1,12 @@
 [
   {
     "id": 1,
+    "style": {
+      "column": "1 / span 2;",
+      "row": "1 / span 2;",
+      "title": "16px",
+      "text": "4px"
+    },
     "name": "Raja Ampat",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Raja-Ampat.jpg",
     "desc": "Tempat ini sendiri merupakan gugusan beberapa pulau kecil yang datarannya tinggi. Di bawahnya terdapat pantai biru yang membentang cantik.",
@@ -8,6 +14,12 @@
   },
   {
     "id": 2,
+    "style": {
+      "column": "3 / span 2;",
+      "row": "1 / span 2;",
+      "title": "16px",
+      "text": "10px"
+    },
     "name": "Wakatobi",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Wakatobi.jpg",
     "desc": "Nah, kalau Anda berkunjung ke sini, diving adalah aktivitas yang tidak boleh Anda lewatkan, sebab kekayaan hayatinya sungguh berlimpah.",
@@ -15,6 +27,12 @@
   },
   {
     "id": 3,
+    "style": {
+      "column": "5 / span 4;",
+      "row": "1 / span 5;",
+      "title": "24px",
+      "text": "16px"
+    },
     "name": "Nusa Penida",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Nusa-Penida.jpg",
     "desc": "Apabila Anda menyukai scuba diving dan snorkeling, pulau ini cocok untuk Anda kunjungi. Dibandingkan dengan Nusa-Nusa lainnya, Nusa Penida berkembang lebih lambat. Sehingga kondisi pulau ini cenderung lebih sepi juga.",
@@ -22,6 +40,12 @@
   },
   {
     "id": 4,
+    "style": {
+      "column": "1 / span 4;",
+      "row": "3 / span 3",
+      "title": "24px",
+      "text": "16px"
+    },
     "name": "Tana Toraja",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Tana-Toraja.jpg",
     "desc": "Beralih ke Sulawesi Selatan, ada Tana Toraja yang sangat populer, magis, dan juga menyimpan surga tersembunyi. Selain menjadi wisata alam Indonesia yang memukau indera, tempat ini memiliki budaya yang unik.",
@@ -29,15 +53,27 @@
   },
   {
     "id": 5,
+    "style": {
+      "column": "1 / span 4;",
+      "row": "6 / span 3",
+      "title": "24px",
+      "text": "16px"
+    },
     "name": "Goa Jomblang",
-    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Goa-Jomblang.jpg",
+    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2021/08/Foto-Goa-Jomblang.jpg.webp",
     "desc": "Tempat ini cocok untuk Anda yang menyukai liburan ekstrem karena untuk mencapainya Anda harus menjelajah goa vertikal dulu. Tentu saja, ada tali dan gear lengkap untuk membantu Anda masuk ke dalam goa.",
     "seller": 72
   },
   {
     "id": 6,
+    "style": {
+      "column": "5 / span 4;",
+      "row": "6 / span 3",
+      "title": "24px",
+      "text": "16px"
+    },
     "name": "Tamansari",
-    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Tamansari.jpg",
+    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2021/03/Tamansari.jpg",
     "desc": "Tamansari biasanya masuk dalam daftar wisata di Indonesia yang wajib dikunjungi ketika di Yogyakarta. Tempat ini dulunya dibuat untuk berbagai keperluan, namun yang ada sekarang hanyalah sebagian bangunannya saja.",
     "seller": 89
   }
