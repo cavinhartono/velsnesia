@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Danau Toba",
+    "from": "Sumatera Utara",
+    "review": 4.8,
+    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Danau-Toba.jpg",
+    "desc": "Destinasi ini merupakan salah satu tempat wisata Indonesia yang mendunia, yang sebaiknya tidak Anda lewatkan. Terlepas dari legenda asal-usul danau ini, ilmuwan menyebutkan bahwa Danau Toba merupakan danau vulkanik terbesar yang pernah terjadi di dunia – erupsi besar yang terjadi sekitar 74.000 tahun lalu adalah penyebabnya. Bahkan 60% makhluk hidup pada saat itu musnah. Tempat wisata Medan ini menawarkan pemandangan alam maha indah. Menyebrang naik perahu ke Pulau Samosir dan mengunjungi kampung adat sambil menyaksikan peninggalan Zaman Batu bisa menjadi perjalanan Anda yang tak terlupakan."
+  },
+  {
+    "id": 2,
+    "name": "Nusa Dua",
+    "from": "Bali Kuta Selatan",
+    "review": 4.6,
+    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Nusa-Dua.jpg",
+    "desc": "Bali menjadi destinasi wisata impian banyak orang. Salah satu tempat yang sebaiknya tidak Anda lewatkan adalah Nusa Dua. Sebagai objek wisata di indonesia beserta keterangannya bali merupakan tempat yang paling banyak di kunjungi wisatawan. Selain menawarkan keindahan alam Bali yang memukau, Anda pun bisa menikmati hiburan seperti Water Blow, The Pirates Bay, dan aktivitas air menarik lain yang memacu adrenalin. Maka dari itu, Nusa Dua adalah destinasi yang tepat untuk solo traveller maupun yang berwisata bersama keluarga."
+  },
+  {
+    "id": 3,
+    "name": "Pantai Parai Tenggiri",
+    "from": "Bangka Belitung",
+    "review": 4.4,
+    "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Pantai-Parai-Tenggiri.jpg",
+    "desc": "Pantai Parai Tenggiri tentu merupakan salah satu di antaranya. Terletak di Kabupaten Bangka, pantai yang satu ini meraih popularitasnya setelah film Laskar Pelangi booming. Air pantai ini berwarna biru toska dan banyak dipenuhi batu granit di sana-sini. Tentu saja, Anda bisa menikmati pemandangan di pantai ini dengan leluasa sambil berenang, snorkeling, dan lain sebagainya. Untuk mengunjungi pantai ini, Anda harus membayar tiket masuk sebesar Rp25.000. Tidak perlu khawatir karena di dalamnya sudah ada fasilitas seperti kamar mandi, tempat ibadah, dan juga berbagai wahana menarik."
+  }
+]

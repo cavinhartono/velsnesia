@@ -1,6 +1,5 @@
 <script setup>
 import Star from '@/components/icons/travels/IconStar.vue'
-import Clock from '@/components/icons/travels/IconClock.vue'
 </script>
 
 <template>
@@ -16,21 +15,11 @@ import Clock from '@/components/icons/travels/IconClock.vue'
             <slot name="desc"></slot>
           </p>
         </div>
-        <div class="flex between mx-md">
-          <div class="price">
-            <p class="subtitle">Harga</p>
-            <h2 class="title">
-              <slot name="price"></slot>
-            </h2>
-          </div>
+        <div class="mx-md" style="text-align: end">
           <div class="review">
             <span class="icon"> <Star /> </span>
             <span class="subtitle"><slot name="review"></slot></span>
           </div>
-        </div>
-        <div class="duration flex center" style="justify-content: start; gap: 8px">
-          <span class="icon"> <Clock /> </span>
-          <span class="subtitle"> <slot name="duration"></slot> </span>
         </div>
       </div>
     </div>

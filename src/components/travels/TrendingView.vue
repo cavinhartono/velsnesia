@@ -6,36 +6,14 @@ import ListWithImage from '@/components/travels/ImageListView.vue'
 <template>
   <div class="trending">
     <h2 class="title">Trending</h2>
-    <Card>
+    <Card v-for="travel in travels" :key="travel.id">
       <ListWithImage>
         <template #image>
-          <img src="@/components/images/pura-1.jpg" alt="Gambar" />
+          <img src="`${travel.img}" alt="Gambar" />
         </template>
-        <template #title>Gunung Agung</template>
-        <template #desc>Bali, Indonesia</template>
-        <template #review>4.6</template>
-        <template #price>IDR. 50.000</template>
-        <template #duration>3 Jam</template>
-      </ListWithImage>
-      <ListWithImage>
-        <template #image>
-          <img src="@/components/images/pura-1.jpg" alt="Pura" />
-        </template>
-        <template #title>Gunung Agung</template>
-        <template #desc>Bali, Indonesia</template>
-        <template #review>4.6</template>
-        <template #price>IDR. 50.000</template>
-        <template #duration>3 Jam</template>
-      </ListWithImage>
-      <ListWithImage>
-        <template #image>
-          <img src="@/components/images/pura-1.jpg" alt="Pura" />
-        </template>
-        <template #title>Gunung Agung</template>
-        <template #desc>Bali, Indonesia</template>
-        <template #review>4.6</template>
-        <template #price>IDR. 50.000</template>
-        <template #duration>3 Jam</template>
+        <template #title>{{ travel.name }}</template>
+        <template #desc>{{ travel.from }}</template>
+        <template #review>{{ travel.review }}</template>
       </ListWithImage>
     </Card>
   </div>
@@ -49,21 +27,10 @@ export default {
     }
   },
   methods: {
-    fetchData() {
-      fetch(
-        'https://hotels4.p.rapidapi.com/locations/v3/search?q=bali&locale=en_US&langid=1033&siteid=300000001',
-        {
-          method: 'GET',
-          headers: {
-            'X-RapidAPI-Key': '',
-            'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
-          }
-        }
-      )
-        .then((response) => {
-          response.json().then((data) => (this.travels = data))
-        })
-        .catch((err) => console.err(err))
+    getTrendingData() {
+      fetch('@/API/Trending.json')
+        .then((response) => response)
+        .then((data) => (this.travels = data))
     }
   }
 }
