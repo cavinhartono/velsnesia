@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: $head_fonts;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   padding: 40px 100px;
   color: $white-primary;
   transition: 0.3s;
+  z-index: 10;
 }
 
 .header .logo .icon {
@@ -46,6 +48,10 @@ body {
   color: $white-secondary;
 }
 
+.nav .list .link {
+  position: relative;
+}
+
 .nav :not(.list:last-child .link) {
   color: inherit;
 }
@@ -55,7 +61,8 @@ body {
 }
 
 .trending,
-.destinations {
+.destinations,
+.best_sellers {
   padding: 100px;
 }
 

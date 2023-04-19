@@ -2,8 +2,6 @@
   <svg
     id="Layer_1"
     fill="currentColor"
-    width="auto"
-    height="auto"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"

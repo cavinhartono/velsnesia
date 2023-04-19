@@ -5,6 +5,7 @@ import Card from '@/components/travels/CardInformationView.vue'
 import List from '@/components/travels/ListInformationView.vue'
 import Trending from '@/components/travels/TrendingView.vue'
 import Destination from '@/views/travels/DestinationView.vue'
+import BestSeller from '../../components/travels/BestSellersView.vue'
 import Footer from '@/components/travels/FooterView.vue'
 
 // Icons
@@ -16,7 +17,7 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
 <template>
   <section class="container">
     <Header />
-    <div class="homepage flex center" style="flex-direction: column">
+    <div class="homepage flex center" id="home" style="flex-direction: column">
       <div class="img homepage_img">
         <img src="@/components/images/homepage.jpg" alt="Homepage" class="photo" />
       </div>
@@ -51,6 +52,7 @@ import IconMap from '@/components/icons/travels/IconMap.vue'
     </div>
     <Trending />
     <Destination />
+    <BestSeller />
     <Footer />
   </section>
 </template>

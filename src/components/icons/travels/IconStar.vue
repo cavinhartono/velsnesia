@@ -2,8 +2,6 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
-    width="auto"
-    height="auto"
     viewBox="0 0 512 512"
   >
     <path

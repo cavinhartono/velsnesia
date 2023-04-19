@@ -19,6 +19,16 @@ window.onscroll = () => {
 }
 </script>
 
+<script>
+const List = document.querySelectorAll('.nav .list')
+function ActiveList() {
+  List.forEach((e) => e.classList.remove('active'))
+  this.classList.add('active')
+}
+
+List.forEach((e) => e.addEventListener('click', ActiveList))
+</script>
+
 <template>
   <header class="header flex between">
     <div class="logo">
@@ -26,14 +36,14 @@ window.onscroll = () => {
       <span class="icon"><IconAirplane /></span>
     </div>
     <ul class="nav gap flex">
-      <li class="list">
-        <RouterLink class="link" to="/">Home</RouterLink>
+      <li class="list active">
+        <a class="link" href="#home">Home</a>
       </li>
       <li class="list">
-        <RouterLink class="link" to="/destinations">Destinations</RouterLink>
+        <a class="link" href="#destinations">Destinations</a>
       </li>
       <li class="list">
-        <RouterLink class="link" to="/about">How it works</RouterLink>
+        <a class="link" href="#bestSellers">How it works</a>
       </li>
       <li class="list">
         <RouterLink class="link btn primary" to="/login">Login</RouterLink>

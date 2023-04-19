@@ -1,11 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    width="auto"
-    height="auto"
-    viewBox="0 0 512 512"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
     <polyline
       points="268 112 412 256 268 400"
       style="

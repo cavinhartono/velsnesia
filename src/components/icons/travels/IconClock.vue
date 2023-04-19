@@ -1,11 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    width="auto"
-    height="auto"
-    viewBox="0 0 512 512"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
     <path
       d="M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z"
       style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 32px"
