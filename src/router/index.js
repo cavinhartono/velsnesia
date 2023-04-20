@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { getAuth } from 'firebase/auth'
 import HomeView from '../views/travels/HomeView.vue'
-import DestinationView from '../views/travels/DestinationView.vue'
-import AboutView from '../views/travels/AboutView.vue'
+import LoginView from '../views/travels/LoginView.vue'
+import RegisterView from '../views/travels/RegisterView.vue'
+import DashboardView from '../views/travels/DashboardView.vue'
+import Feed from '../views/Feed.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,16 +15,36 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/destinations',
-      name: 'destination',
-      component: DestinationView
+      path: '/login',
+      name: 'login',
+      component: LoginView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView
+      path: '/register',
+      name: 'register',
+      component: RegisterView
+    },
+    {
+      path: '/feed',
+      name: 'feed',
+      component: Feed,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: DashboardView
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (getAuth().currentUser) next()
+    else next('/') // seperti middleware
+  } else next()
 })
 
 export default router

@@ -1,6 +1,26 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { useRouter, RouterLink } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
 import IconAirplane from '../icons/travels/IconAirplane.vue'
+
+const isLogin = ref(false),
+  router = useRouter()
+
+let auth
+onMounted(() => {
+  auth = getAuth()
+  onAuthStateChanged(auth, (user) => {
+    if (user) isLogin.value = true
+    else isLogin.value = false
+  })
+})
+
+const signout = () => {
+  signOut(auth).then(() => {
+    router.push('/login')
+  })
+}
 
 var prevScroll = window.pageYOffset
 
@@ -46,6 +66,9 @@ List.forEach((e) =>
       </li>
       <li class="list">
         <RouterLink class="link btn primary" to="/login">Login</RouterLink>
+      </li>
+      <li class="list">
+        <button class="link btn primary" @click="signout" v-if="isLogin">Keluar</button>
       </li>
     </ul>
   </header>
