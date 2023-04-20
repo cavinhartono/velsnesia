@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { getAuth } from 'firebase/auth'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import HomeView from '../views/travels/HomeView.vue'
 import LoginView from '../views/travels/LoginView.vue'
 import RegisterView from '../views/travels/RegisterView.vue'
@@ -27,22 +27,35 @@ const router = createRouter({
     {
       path: '/feed',
       name: 'feed',
-      component: Feed,
-      meta: {
-        requiresAuth: true
-      }
+      component: Feed
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: DashboardView
+      component: DashboardView,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
 
-router.beforeEach((to, from, next) => {
+const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const removeListener = onAuthStateChanged(
+      getAuth(),
+      (user) => {
+        removeListener()
+        resolve(user)
+      },
+      reject
+    )
+  })
+}
+
+router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (getAuth().currentUser) next()
+    if (await getCurrentUser()) next()
     else next('/') // seperti middleware
   } else next()
 })

@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue'
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup
+} from 'firebase/auth'
 import { useRouter } from 'vue-router'
 
 const email = ref(''),
@@ -14,7 +19,7 @@ const login = () => {
     .then((data) => {
       console.info('Successfully signed in!')
       console.log(auth.currentUser)
-      router.push('/feed') // redirect
+      router.push('/dashboard') // redirect
     })
     .catch((error) => {
       console.error(error.code)
@@ -35,7 +40,17 @@ const login = () => {
     })
 }
 
-const withGoogle = () => {}
+const withGoogle = () => {
+  const provider = new GoogleAuthProvider()
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user)
+      router.push('/dashboard')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}
 </script>
 
 <template>
@@ -62,5 +77,6 @@ const withGoogle = () => {}
       </div>
     </form>
     <p class="text">Anda tidak punya akun? <a href="/register" class="link">Buat Akun.</a></p>
+    <button @click="withGoogle">Sign In with Google</button>
   </div>
 </template>
