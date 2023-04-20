@@ -3,9 +3,7 @@
     "id": 1,
     "style": {
       "column": "1 / span 2;",
-      "row": "1 / span 2;",
-      "title": "16px",
-      "text": "4px"
+      "row": "1 / span 2;"
     },
     "name": "Raja Ampat",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Raja-Ampat.jpg",
@@ -16,9 +14,7 @@
     "id": 2,
     "style": {
       "column": "3 / span 2;",
-      "row": "1 / span 2;",
-      "title": "16px",
-      "text": "10px"
+      "row": "1 / span 2;"
     },
     "name": "Wakatobi",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Wakatobi.jpg",
@@ -29,9 +25,7 @@
     "id": 3,
     "style": {
       "column": "5 / span 4;",
-      "row": "1 / span 5;",
-      "title": "24px",
-      "text": "16px"
+      "row": "1 / span 5;"
     },
     "name": "Nusa Penida",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Nusa-Penida.jpg",
@@ -42,9 +36,7 @@
     "id": 4,
     "style": {
       "column": "1 / span 4;",
-      "row": "3 / span 3",
-      "title": "24px",
-      "text": "16px"
+      "row": "3 / span 3"
     },
     "name": "Tana Toraja",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2022/04/Tana-Toraja.jpg",
@@ -55,9 +47,7 @@
     "id": 5,
     "style": {
       "column": "1 / span 4;",
-      "row": "6 / span 3",
-      "title": "24px",
-      "text": "16px"
+      "row": "6 / span 3"
     },
     "name": "Goa Jomblang",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2021/08/Foto-Goa-Jomblang.jpg.webp",
@@ -68,9 +58,7 @@
     "id": 6,
     "style": {
       "column": "5 / span 4;",
-      "row": "6 / span 3",
-      "title": "24px",
-      "text": "16px"
+      "row": "6 / span 3"
     },
     "name": "Tamansari",
     "img": "https://salsawisata.b-cdn.net/wp-content/uploads/2021/03/Tamansari.jpg",

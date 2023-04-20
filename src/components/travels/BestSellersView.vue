@@ -10,11 +10,11 @@ export default {
   },
   methods: {
     sortObject() {
-      let destinations = this.topSellers
-
-      destinations = destinations.sort((a, b) => {
-        if (a.seller < b.seller) return -1
-        if (a.seller > b.seller) return 1
+      let destinations = this.topSellers.sort((a, b) => {
+        let fa = a.seller,
+          fb = b.seller
+        if (fa < fb) return -1
+        if (fa > fb) return 1
         return 0
       })
 
@@ -38,13 +38,13 @@ export default {
           <img :src="travel.img" alt="Gambar" />
         </div>
         <div class="content mx-md">
-          <span class="content">
+          <span class="content flex" style="flex-direction: column; gap: 8px">
             <h2 class="title">{{ travel.name }}</h2>
             <p class="text">
               {{ travel.desc }}
             </p>
           </span>
-          <div class="action flex gap mx-md" style="flex-direction: column; width: 100%">
+          <div class="action flex mx-md" style="flex-direction: column; width: 100%; gap: 12px">
             <button class="btn secondary">Show</button>
             <a href="" class="link btn primary">See</a>
           </div>

@@ -23,10 +23,9 @@ export default {
         <a href="#" class="link">
           <img :src="destination.img" class="photo" />
           <div class="desc">
-            <h2 class="title" :style="`--title:${destination.style.title}`">
+            <h2 class="title">
               {{ destination.name }}
             </h2>
-            <p class="text" :style="`--text: ${destination.style.text}`">{{ destination.desc }}</p>
           </div>
         </a>
       </li>

@@ -17,17 +17,15 @@ window.onscroll = () => {
 
   prevScroll = currentScroll
 }
-</script>
 
-<script>
 const List = document.querySelectorAll('.nav .list')
 
-function ActiveList() {
-  List.forEach((e) => e.classList.remove('active'))
-  this.classList.add('active')
-}
-
-List.forEach((e) => e.addEventListener('click', ActiveList))
+List.forEach((e) =>
+  e.addEventListener('click', function () {
+    List.forEach((item) => item.classList.remove('active'))
+    this.classList.add('active')
+  })
+)
 </script>
 
 <template>

@@ -49,6 +49,7 @@ svg {
   outline: none;
   position: relative;
   padding: 12px $md;
+  text-align: center;
   background: inherit;
   border-radius: 4px;
   color: inherit;
@@ -59,6 +60,11 @@ svg {
   @extend %btn;
   background: $primary-color;
   color: $white-primary;
+}
+
+.secondary {
+  @extend %btn;
+  border: 1px solid #ddd;
 }
 
 .full-content {

@@ -198,7 +198,7 @@ body {
     border-radius: 4px;
   }
   .title {
-    font-size: $md !important;
+    font-size: $rg !important;
   }
   .title,
   .text {
@@ -278,7 +278,6 @@ body {
         color: $white-primary;
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
         .title {
-          font-size: var(--title) !important;
           margin: 12px 0;
         }
         .text {
@@ -316,22 +315,18 @@ body {
     overflow: hidden;
     border-radius: 4px;
   }
-  .title {
-    font-size: $rg !important;
-  }
-  .title,
-  .text {
-    margin: 0 !important;
-  }
-  .subtitle {
-    font-size: 16px !important;
-    color: $black-secondary !important;
+  .list {
+    .title {
+      font-size: 18px !important;
+    }
   }
   .text {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     display: -webkit-box;
     font-size: 16px !important;
+    font-weight: 600;
+    line-height: $md;
     text-align: justify;
     color: $black-secondary;
     white-space: pre-wrap;

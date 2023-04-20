@@ -46,11 +46,12 @@ svg {
   text-align: justify;
 }
 
-.primary {
+.secondary, .primary {
   border: none;
   outline: none;
   position: relative;
   padding: 12px 2rem;
+  text-align: center;
   background: inherit;
   border-radius: 4px;
   color: inherit;
@@ -60,6 +61,10 @@ svg {
 .primary {
   background: hsl(355deg, 78%, 43%);
   color: hsl(0deg, 0%, 100%);
+}
+
+.secondary {
+  border: 1px solid #ddd;
 }
 
 .full-content {
@@ -287,7 +292,7 @@ body {
   border-radius: 4px;
 }
 .trending .title {
-  font-size: 2rem !important;
+  font-size: 1.75rem !important;
 }
 .trending .title,
 .trending .text {
@@ -371,7 +376,6 @@ body {
   z-index: 10;
 }
 .nations .list-1 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-1 .desc .text {
@@ -413,7 +417,6 @@ body {
   z-index: 10;
 }
 .nations .list-2 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-2 .desc .text {
@@ -455,7 +458,6 @@ body {
   z-index: 10;
 }
 .nations .list-3 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-3 .desc .text {
@@ -497,7 +499,6 @@ body {
   z-index: 10;
 }
 .nations .list-4 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-4 .desc .text {
@@ -539,7 +540,6 @@ body {
   z-index: 10;
 }
 .nations .list-5 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-5 .desc .text {
@@ -581,7 +581,6 @@ body {
   z-index: 10;
 }
 .nations .list-6 .desc .title {
-  font-size: var(--title) !important;
   margin: 12px 0;
 }
 .nations .list-6 .desc .text {
@@ -608,22 +607,16 @@ body {
   overflow: hidden;
   border-radius: 4px;
 }
-.best_sellers .title {
-  font-size: 1.75rem !important;
-}
-.best_sellers .title,
-.best_sellers .text {
-  margin: 0 !important;
-}
-.best_sellers .subtitle {
-  font-size: 16px !important;
-  color: hsla(0deg, 0%, 13%, 0.75) !important;
+.best_sellers .list .title {
+  font-size: 18px !important;
 }
 .best_sellers .text {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   display: -webkit-box;
   font-size: 16px !important;
+  font-weight: 600;
+  line-height: 2rem;
   text-align: justify;
   color: hsla(0deg, 0%, 13%, 0.75);
   white-space: pre-wrap;
