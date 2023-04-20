@@ -21,6 +21,7 @@ window.onscroll = () => {
 
 <script>
 const List = document.querySelectorAll('.nav .list')
+
 function ActiveList() {
   List.forEach((e) => e.classList.remove('active'))
   this.classList.add('active')

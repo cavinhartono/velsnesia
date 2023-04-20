@@ -109,7 +109,8 @@ body {
   height: 2rem;
 }
 
-.container {
+.container, .best_sellers .cards,
+.best_sellers .header {
   position: relative;
   width: 100%;
 }
@@ -588,6 +589,50 @@ body {
   line-height: 1.75rem;
   color: hsla(0deg, 0%, 100%, 0.75);
   font-weight: 500;
+}
+
+.best_sellers .cards,
+.best_sellers .header {
+  transform: none;
+  padding: 0;
+}
+.best_sellers .list {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 8px 45px hsla(0deg, 0%, 13%, 0.1);
+}
+.best_sellers .img {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.best_sellers .title {
+  font-size: 1.75rem !important;
+}
+.best_sellers .title,
+.best_sellers .text {
+  margin: 0 !important;
+}
+.best_sellers .subtitle {
+  font-size: 16px !important;
+  color: hsla(0deg, 0%, 13%, 0.75) !important;
+}
+.best_sellers .text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  font-size: 16px !important;
+  text-align: justify;
+  color: hsla(0deg, 0%, 13%, 0.75);
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+.best_sellers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

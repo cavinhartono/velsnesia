@@ -6,23 +6,23 @@ import Instagram from '../icons/travels/IconInstagram.vue'
 </script>
 
 <template>
-  <footer class="site-footer">
+  <footer class="site-footer" style="padding: 20px 100px">
     <div class="container">
       <div class="row flex between">
-        <div class="col-sm-12 col-md-6" style="padding: 0">
+        <div class="col-sm-12 col-md-6" style="padding: 0; max-width: 600px">
           <h6>About</h6>
-          <p class="text-justify">
+          <p class="text-justify text" style="margin: 8px 0">
             Velsnesia is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia neque,
             quam laborum repellendus enim unde non dicta ad hic rerum aliquam quis accusamus facilis
             laudantium libero? Iste neque est hic?
           </p>
         </div>
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-md-3" style="max-width: calc(100% - 600px)">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><RouterLink to="/">Home</RouterLink></li>
-            <li><RouterLink to="/destinations">Destinations</RouterLink></li>
-            <li><RouterLink to="/about">Contact Us</RouterLink></li>
+            <li><a class="link" href="#home">Home</a></li>
+            <li><a class="link" href="#destinations">Destinations</a></li>
+            <li><a class="link" href="#bestSellers">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -30,7 +30,7 @@ import Instagram from '../icons/travels/IconInstagram.vue'
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">
+          <p class="copyright-text text">
             Copyright &copy; 2023 All Rights Reserved by <a href="#">Velsnesia</a>.
           </p>
         </div>
@@ -38,17 +38,17 @@ import Instagram from '../icons/travels/IconInstagram.vue'
         <div class="col-md-4 col-sm-6 col-xs-12">
           <ul class="social-icons">
             <li>
-              <RouterLink to="https://facebook.com">
-                <span class="icon flex center"><Facebook /></span>
+              <RouterLink to="https://facebook.com" class="flex center">
+                <span class="icon"><Facebook /></span>
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="https://twiter.com">
+              <RouterLink to="https://twiter.com" class="flex center">
                 <span class="icon"><Twitter /></span>
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="https://instagram.com">
+              <RouterLink to="https://instagram.com" class="flex center">
                 <span class="icon"><Instagram /></span>
               </RouterLink>
             </li>
@@ -65,13 +65,14 @@ import Instagram from '../icons/travels/IconInstagram.vue'
   height: 24px;
   color: #fff;
 }
-
+.text-justify {
+  text-align: justify;
+}
 svg {
   width: inherit;
   height: inherit;
   color: inherit;
 }
-
 .site-footer {
   background-color: #26272b;
   padding: 45px 0 20px;
